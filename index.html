@@ -4,122 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johnson's RVs & Auto Sales LLC</title>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background: #f2f2f2;
+        }
+
+        nav {
+            background: #222;
+            padding: 12px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            box-shadow: 0 0 12px black;
         }
 
-        .container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 600px;
-            padding: 40px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 32px;
-        }
-
-        .subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 18px;
-        }
-
-        .nav-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .nav-link {
+        .nav-left {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            gap: 18px;
+        }
+
+        .nav-left a {
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            font-size: 18px;
             font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: color 0.3s;
         }
 
-        .nav-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        .nav-left a:hover {
+            color: #ffcc00;
         }
 
-        .nav-link.main {
-            grid-column: 1 / -1;
+        .nav-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
         }
 
-        .emoji {
-            font-size: 24px;
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s;
+            color: #222;
         }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 25px;
-            }
+        .social-icon:hover {
+            background: #ffcc00;
+            transform: scale(1.1);
+        }
 
-            h1 {
-                font-size: 24px;
-            }
+        .maps-btn {
+            background: #ea4335;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-            .nav-grid {
-                grid-template-columns: 1fr;
-            }
+        .maps-btn:hover {
+            background: #c5221f;
+        }
 
-            .nav-link {
-                padding: 15px;
-                font-size: 14px;
-            }
+        @keyframes shine {
+            0% { left:-100%; }
+            100% { left:100%; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🏕️ Johnson's RVs & Auto Sales LLC</h1>
-        <p class="subtitle">Welcome to our digital hub</p>
 
-        <div class="nav-grid">
-            <a href="johnsons-rv-auto-website/index.html" class="nav-link main">
-                <span class="emoji">🏠</span>
-                <span>Main Website</span>
-            </a>
+    <!-- LUXURY GLOSSY HEADER -->
+    <header style="
+        width:100%;
+        height:420px;
+        background:url('johnsons-rv-auto-website/images/header-banner.jpg') center center/cover no-repeat;
+        position:relative;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+    ">
 
-            <a href="johnsons-rv-auto-website/todo.html" class="nav-link">
-                <span class="emoji">📝</span>
-                <span>To-Do List</span>
-            </a>
+        <div style="
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(255,255,255,0.45),
+                    rgba(255,255,255,0.10)
+                ),
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.10)
+                );
+            mix-blend-mode:overlay;
+            pointer-events:none;
+        "></div>
 
-            <a href="johnsons-rv-auto-website/joke-generator.html" class="nav-link">
-                <span class="emoji">😂</span>
-                <span>Joke Generator</span>
-            </a>
+        <div style="
+            position:absolute;
+            top:0;
+            left:-100%;
+            width:200%;
+            height:100%;
+            background:linear-gradient(
+                75deg,
+                transparent 0%,
+                rgba(255,255,255,0.35) 50%,
+                transparent 100%
+            );
+            animation:shine 4s linear infinite;
+            pointer-events:none;
+        "></div>
+
+        <h1 style="
+            position:relative;
+            font-size:52px;
+            color:white;
+            text-shadow:4px 4px 12px black;
+            font-weight:900;
+            letter-spacing:3px;
+            text-align:center;
+            padding:20px;
+        ">
+            Johnson's RVs & Auto Sales LLC
+        </h1>
+
+        <img src="johnsons-rv-auto-website/images/camper.png" alt="Camper"
+            style="
+                position:absolute;
+                bottom:25px;
+                right:25px;
+                width:320px;
+                filter:drop-shadow(0 0 12px black);
+            ">
+    </header>
+
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="#">Inventory</a>
+            <a href="#">Units</a>
+            <a href="#">Repairs</a>
+            <a href="#">Contact</a>
         </div>
-    </div>
+        <div class="nav-right">
+            <a href="https://www.google.com/maps" target="_blank" class="maps-btn">📍 Directions</a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon" title="Facebook">f</a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon" title="Twitter/X">𝕏</a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon" title="TikTok">🎵</a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon" title="Instagram">📷</a>
+        </div>
+    </nav>
+
+    <section style="padding:40px; text-align:center;">
+        <h2>Welcome to Johnson's RVs & Auto Sales LLC</h2>
+        <p style="font-size:20px; max-width:800px; margin:auto;">
+            We offer high‑quality RVs, campers, and vehicles at affordable prices.
+            Browse our inventory or contact us today for more information.
+        </p>
+    </section>
+
+    <footer style="
+        background:#222;
+        color:white;
+        padding:20px;
+        text-align:center;
+        margin-top:40px;
+        box-shadow:0 0 12px black;
+    ">
+        <p>© 2026 Johnson's RVs & Auto Sales LLC</p>
+    </footer>
+
 </body>
 </html>
