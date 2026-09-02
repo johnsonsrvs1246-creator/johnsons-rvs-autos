@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnson's RVs & Autos</title>
 
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
+
+        header {
+            background: #1e3a5f;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background: #14273d;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .hero {
+            background: #1e3a5f;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .button-row {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: #1e3a5f;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #14273d;
+        }
+
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .gallery-grid div {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Johnson's RVs & Autos</h1>
+    <p>Your trusted RV & vehicle dealership</p>
+</header>
+
+<nav>
+    <a href="#inventory">Inventory</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+    Quality RVs & Vehicles You Can Trust
+</div>
+
+<section id="inventory" class="section">
+    <h2>Featured Inventory</h2>
+    <p>Images will be added soon.</p>
+
+    <div class="inventory-grid">
+        <div class="item">
+            <img src="images/rv1.jpg" alt="RV 1">
+            <h3>2020 Forest River No Boundaries</h3>
+            <p>Lightweight, rugged, adventure-ready.</p>
+        </div>
+
+        <div class="item">
+            <img src="images/rv2.jpg" alt="RV 2">
+            <h3>2019 Jayco Jay Flight</h3>
+            <p>Spacious and comfortable for families.</p>
+        </div>
+
+        <div class="item">
+            <img src="images/car1.jpg" alt="Car 1">
+            <h3>2019 Chevy Trax</h3>
+            <p>Compact, efficient, and reliable.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="section">
+    <h2>Photo Gallery</h2>
+    <p>More photos coming soon.</p>
+
+    <div class="gallery-grid">
+        <div><img src="images/gallery1.jpg" alt="Gallery 1"></div>
+        <div><img src="images/gallery2.jpg" alt="Gallery 2"></div>
+        <div><img src="images/gallery3.jpg" alt="Gallery 3"></div>
+        <div><img src="images/gallery4.jpg" alt="Gallery 4"></div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Johnson's RVs & Autos is committed to providing high-quality RVs and vehicles at fair prices.</p>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+
+    <p>📍 Marshville, NC</p>
+    <p>📞 (555) 123‑4567</p>
+
+    <div class="button-row">
+
+        <!-- Direct Dial Button -->
+        <a class="btn" href="tel:5551234567">📞 Call Us</a>
+
+        <!-- Google Maps Directions Button -->
+        <a class="btn" href="YOUR_GOOGLE_MAPS_URL_HERE" target="_blank">📍 Directions</a>
+
+        <!-- Facebook Button -->
+        <a class="btn" href="YOUR_FACEBOOK_URL_HERE" target="_blank">👍 Facebook</a>
+
+        <!-- Instagram Button -->
+        <a class="btn" href="YOUR_INSTAGRAM_URL_HERE" target="_blank">📸 Instagram</a>
+
+        <!-- Twitter/X Button -->
+        <a class="btn" href="YOUR_TWITTER_URL_HERE" target="_blank">🐦 Twitter/X</a>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Johnson's RVs & Autos — All Rights Reserved
+</footer>
+
+</body>
+</html>
