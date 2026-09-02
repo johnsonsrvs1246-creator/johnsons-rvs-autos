@@ -9,7 +9,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
+            background: #f7f7f7;
             color: #222;
         }
 
@@ -58,7 +58,7 @@
             margin-top: 0;
         }
 
-        /* FEATURED INVENTORY */
+        /* INVENTORY GRID */
         .inventory-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -72,14 +72,53 @@
             box-shadow: 0 0 6px #ddd;
             text-align: center;
         }
-        .item h3 {
-            margin: 10px 0;
-        }
 
         /* SOCIAL ICONS */
         .social-bar {
             text-align: center;
             margin: 40px 0;
+        }
+        .social-bar img {
+            width: 42px;
+            margin: 0 15px;
+            transition: 0.2s;
+        }
+        .social-bar img:hover {
+            transform: scale(1.15);
+        }
+
+        /* SLIDER */
+        .slider-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            background: white;
+        }
+
+        .slider {
+            display: flex;
+            width: 100%;
+            animation: slide 18s infinite;
+        }
+
+        .slider img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            45% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            70% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            95% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
         }
 
         /* FOOTER */
@@ -141,26 +180,36 @@
     <!-- SOCIAL ICONS AT BOTTOM -->
     <div class="social-bar">
 
-        <!-- OFFICIAL FACEBOOK ICON -->
-        <a href="https://www.facebook.com/profile.php?id=61591545535492" target="_blank" style="margin:0 15px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="40" alt="Facebook">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61591545535492" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
         </a>
 
-        <!-- OFFICIAL INSTAGRAM ICON -->
-        <a href="https://www.instagram.com/YOURPAGE" target="_blank" style="margin:0 15px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="40" alt="Instagram">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
         </a>
 
-        <!-- OFFICIAL GOOGLE MAPS ICON -->
-        <a href="https://maps.google.com/?q=Johnson's+RV+and+Auto+Sales+LLC" target="_blank" style="margin:0 15px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" width="40" alt="Google Maps">
+        <!-- Google Maps -->
+        <a href="https://maps.google.com/?q=Johnson's+RV+and+Auto+Sales+LLC" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Google Maps">
         </a>
 
-        <!-- OFFICIAL PHONE ICON -->
-        <a href="tel:7045602552" style="margin:0 15px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" width="40" alt="Phone">
+        <!-- Phone -->
+        <a href="tel:7045602552">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone">
         </a>
 
+    </div>
+
+    <!-- BOTTOM SLIDER -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="images/placeholder1.jpg" alt="Inventory 1">
+            <img src="images/placeholder2.jpg" alt="Inventory 2">
+            <img src="images/placeholder3.jpg" alt="Inventory 3">
+            <img src="images/placeholder4.jpg" alt="Inventory 4">
+        </div>
     </div>
 
     <!-- FOOTER -->
