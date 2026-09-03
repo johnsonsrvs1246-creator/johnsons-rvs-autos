@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Johnson's RV & Auto Sales LLC</title>
 
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     /* FULL RED-WHITE-BLUE BACKDROP */
     body {
@@ -16,118 +19,82 @@
     }
 
     /* HEADER IMAGE */
-    .hero {
-      width: 100%;
-      max-height: 450px;
-      overflow: hidden;
-      border-bottom: 6px solid #c62828;
-    }
-
     .hero img {
       width: 100%;
-      display: block;
+      height: 420px;
+      object-fit: cover;
       filter: brightness(1.15) contrast(1.1);
+      border-bottom: 6px solid #c62828;
     }
 
     /* NAVIGATION */
     nav {
-      background: #143042;
+      background: #000;
       padding: 14px 0;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      border-bottom: 4px solid #c62828;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 20px;
+      margin: 0 18px;
       font-size: 18px;
       font-weight: bold;
+      padding: 8px 14px;
+      background: #000;
+      border-radius: 6px;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #ffcc00;
+      background: #c62828;
+      color: #fff;
     }
 
-    /* MAIN CONTENT BOX */
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 30px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #00000055;
-      border-left: 6px solid #c62828;
-      border-right: 6px solid #143042;
-    }
-
+    /* SECTION HEADERS */
     h1, h2 {
       text-align: center;
-      margin-top: 0;
-      color: #143042;
+      margin-top: 40px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* TEXT BLOCKS */
+    .section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 20px auto;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #111;
     }
 
     /* SLIDER PLACEHOLDER */
-    .slider-section {
-      margin: 40px auto;
-      width: 100%;
-      max-width: 1100px;
-    }
-
-    .slider-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      text-align: center;
-      color: #c62828;
-    }
-
     .slider-box {
-      position: relative;
-      overflow: hidden;
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
       border-radius: 10px;
-      background: white;
-      box-shadow: 0 0 10px #00000055;
-      min-height: 200px;
+      min-height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #666;
-      font-size: 18px;
-      border-left: 6px solid #c62828;
-      border-right: 6px solid #143042;
-    }
-
-    /* SOCIAL BAR */
-    .social-bar {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .social-bar a {
-      display: inline-block;
-      margin: 0 15px;
-      text-decoration: none;
-      color: #143042;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .social-bar a:hover {
-      color: #c62828;
+      font-size: 20px;
+      color: #333;
+      box-shadow: 0 0 10px #00000055;
     }
 
     /* CONTACT SECTION */
     .contact-list p {
-      margin: 8px 0;
       text-align: center;
-      font-size: 18px;
+      font-size: 20px;
+      margin: 10px 0;
     }
 
     .contact-list a {
-      color: #143042;
+      color: #000;
       text-decoration: none;
       font-weight: bold;
     }
@@ -136,19 +103,39 @@
       color: #c62828;
     }
 
+    /* ICON BAR */
+    .icon-bar {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .icon-bar a {
+      display: inline-block;
+      margin: 0 20px;
+      font-size: 40px;
+      color: #000;
+      transition: 0.3s;
+    }
+
+    .icon-bar a:hover {
+      color: #c62828;
+    }
+
     /* FOOTER */
     footer {
-      background: #143042;
+      background: #000;
       color: white;
       text-align: center;
-      padding: 18px;
+      padding: 20px;
       margin-top: 40px;
       border-top: 6px solid #c62828;
+      font-size: 16px;
     }
   </style>
 </head>
 
 <body>
+
   <!-- HEADER IMAGE -->
   <div class="hero">
     <img src="images/f350-header.jpg" alt="Johnson's RV & Auto Sales">
@@ -164,66 +151,20 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
-    <h1>Johnson's RV & Auto Sales LLC</h1>
-    <p style="text-align:center; font-size:20px; color:#c62828;">
-      Autos • RVs • Repairs • Sales • Service
-    </p>
-
-    <h2>About Us</h2>
-    <p style="text-align:center;">
-      We buy, sell, and repair RVs and vehicles with honest service and fair pricing.
-      Located right on U.S. 74 in Marshville, NC, we’re your local destination for
-      RVs, autos, and repair work.
-    </p>
-
-    <h2>Contact Information</h2>
-    <div class="contact-list">
-      <p><strong>Phone:</strong> 704-560-2552</p>
-      <p><strong>Email:</strong> <a href="mailto:johnsonsrvs1246@gmail.com">johnsonsrvs1246@gmail.com</a></p>
-
-      <p>
-        <strong>Address:</strong>
-        <a href="https://www.google.com/maps?q=8614+US+74,+Marshville,+NC+28103" target="_blank">
-          8614 U.S. 74, Marshville, NC 28103, US (Open in Google Maps)
-        </a>
-      </p>
-
-      <p>
-        <strong>Facebook:</strong>
-        <a href="https://www.facebook.com/profile.php?id=61591545535492" target="_blank">
-          Visit our Facebook Page
-        </a>
-      </p>
-
-      <p>
-        <strong>Instagram:</strong>
-        <a href="#" target="_blank">
-          Instagram Page (Add URL Later)
-        </a>
-      </p>
-    </div>
+  <!-- ABOUT SECTION -->
+  <h1>Johnson's RV & Auto Sales LLC</h1>
+  <div class="section">
+    We provide reliable RVs, autos, and repair services with honest pricing and dependable customer care.
+    Located on U.S. 74 in Marshville, NC, we proudly serve the community with quality vehicles and professional repair work.
   </div>
 
   <!-- SLIDER PLACEHOLDER -->
-  <div class="slider-section">
-    <div class="slider-title">Featured Units (Slider Coming Soon)</div>
-    <div class="slider-box">
-      Slider will go here when you’re ready to add images.
-    </div>
+  <div class="slider-box">
+    Your slideshow will go here — add images when you're ready.
   </div>
 
-  <!-- SOCIAL BAR -->
-  <div class="social-bar">
-    <a href="https://www.facebook.com/profile.php?id=61591545535492" target="_blank">Facebook</a>
-    <a href="https://www.google.com/maps?q=8614+US+74,+Marshville,+NC+28103" target="_blank">Google Maps</a>
-    <a href="#" target="_blank">Instagram</a>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2026 Johnson's RV & Auto Sales LLC. All rights reserved.
-  </footer>
-</body>
-</html>
+  <!-- CONTACT SECTION -->
+  <h2>Contact Information</h2>
+  <div class="contact-list">
+    <p><strong>Phone:</strong> <a href="tel:7045602552">704-560-2552</a></p>
+    <p><strong>Email:</strong> 
