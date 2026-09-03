@@ -1,1 +1,6 @@
-<img src="images/johnsons-header.jpg" class="header-img" alt="Johnson's RVs Header">
+<header>
+  <img src="images/f350-header.jpg" alt="Dually and Trailer" style="width:100%; max-height:450px; object-fit:cover; display:block;">
+
+  <h1>Johnson's RVs & Autos</h1>
+  <p>Your local destination for quality RVs and vehicles</p>
+</header>
