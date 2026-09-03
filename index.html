@@ -13,21 +13,33 @@
       color: #143042; /* steel blue */
     }
 
-    /* HEADER (your original colors) */
+    /* HEADER — BLUE + WHITE (your original colors) */
     header {
       background: #1f3b4d; /* deep blue */
       color: #fff;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
+      border-bottom: 5px solid #c62828; /* STRONG RED */
     }
 
-    /* NAV (matching header) */
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 1.1rem;
+    }
+
+    /* NAV — BLUE WITH RED HOVER */
     nav {
-      background: #143042; /* steel blue */
+      background: #143042;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
+      gap: 25px;
+      padding: 12px 0;
     }
 
     nav a {
@@ -39,21 +51,22 @@
     }
 
     nav a:hover {
-      background: #1f3b4d;
+      background: #c62828; /* STRONG RED */
       border-radius: 4px;
     }
 
-    /* HERO (matching header colors) */
+    /* HERO — WHITE WITH RED TITLE */
     .hero {
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
       background: #ffffff;
-      border-bottom: 3px solid #1f3b4d;
+      border-bottom: 4px solid #143042;
     }
 
     .hero h1 {
       margin-bottom: 10px;
-      color: #1f3b4d;
+      color: #c62828; /* STRONG RED */
+      font-size: 2.2rem;
     }
 
     .hero p {
@@ -62,9 +75,9 @@
       color: #143042;
     }
 
-    /* SECTIONS */
+    /* SECTIONS — CLEAN WHITE WITH BLUE TITLES */
     .section {
-      padding: 30px 20px;
+      padding: 40px 20px;
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -72,10 +85,13 @@
     .section h2 {
       text-align: center;
       color: #1f3b4d;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #c62828; /* STRONG RED */
+      display: inline-block;
+      padding-bottom: 6px;
     }
 
-    /* CARDS (matching header colors) */
+    /* CARDS — WHITE WITH RED HOVER */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -92,8 +108,9 @@
     }
 
     .card:hover {
-      border-color: #1f3b4d;
-      box-shadow: 0 4px 8px rgba(31,59,77,0.3);
+      border-color: #c62828; /* STRONG RED */
+      box-shadow: 0 4px 8px rgba(198,40,40,0.3);
+      transform: translateY(-5px);
     }
 
     .card h3 {
@@ -101,14 +118,15 @@
       color: #143042;
     }
 
-    /* FOOTER */
+    /* FOOTER — BLUE WITH WHITE TEXT */
     footer {
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       background: #1f3b4d;
       color: #fff;
-      margin-top: 30px;
+      margin-top: 40px;
       font-size: 0.9rem;
+      border-top: 5px solid #c62828; /* STRONG RED */
     }
   </style>
 </head>
