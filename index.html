@@ -9,13 +9,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* FULL RED-WHITE-BLUE BACKDROP */
+    /* GLOBAL */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #c62828 0%, #ffffff 50%, #143042 100%);
-      background-attachment: fixed;
-      color: #222;
+      background: linear-gradient(to bottom, #c62828 0%, #ffffff 40%, #002868 100%);
+      color: #111;
     }
 
     /* HEADER IMAGE */
@@ -23,7 +22,7 @@
       width: 100%;
       height: 420px;
       object-fit: cover;
-      filter: brightness(1.15) contrast(1.1);
+      filter: brightness(1.1) contrast(1.05);
       border-bottom: 6px solid #c62828;
     }
 
@@ -52,45 +51,104 @@
       color: #fff;
     }
 
-    /* SECTION HEADERS */
+    /* HEADERS & TEXT */
     h1, h2 {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
       color: #000;
       font-weight: bold;
     }
 
-    /* TEXT BLOCKS */
     .section {
-      width: 90%;
-      max-width: 1100px;
-      margin: 20px auto;
+      width: 95%;
+      max-width: 1200px;
+      margin: 10px auto 30px;
       font-size: 18px;
       line-height: 1.6;
-      color: #111;
+      text-align: center;
     }
 
-    /* SLIDER PLACEHOLDER */
-    .slider-box {
-      width: 90%;
-      max-width: 1100px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 10px;
-      min-height: 250px;
+    /* SLIDER WRAPPER */
+    .slider-wrapper {
+      width: 95%;
+      max-width: 1400px;
+      margin: 30px auto;
+      overflow: hidden;
+    }
+
+    .slider-track {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      color: #333;
-      box-shadow: 0 0 10px #00000055;
+      gap: 20px;
+      animation: scroll 35s linear infinite;
+    }
+
+    /* 3D CARD STYLE */
+    .unit-card {
+      flex: 0 0 calc(25% - 20px); /* 4 across */
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+      transform: translateY(0);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none;
+      color: #111;
+      overflow: hidden;
+    }
+
+    .unit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 28px rgba(0,0,0,0.5);
+    }
+
+    .unit-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .unit-info {
+      padding: 12px 14px 16px;
+    }
+
+    .unit-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .unit-tagline {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .unit-button {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 10px;
+      background: #000;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .unit-button:hover {
+      background: #c62828;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     /* CONTACT SECTION */
     .contact-list p {
       text-align: center;
       font-size: 20px;
-      margin: 10px 0;
+      margin: 8px 0;
     }
 
     .contact-list a {
@@ -106,7 +164,7 @@
     /* ICON BAR */
     .icon-bar {
       text-align: center;
-      margin: 50px 0;
+      margin: 40px 0 20px;
     }
 
     .icon-bar a {
@@ -127,9 +185,21 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
       border-top: 6px solid #c62828;
       font-size: 16px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .unit-card {
+        flex: 0 0 calc(50% - 20px); /* 2 across on tablets */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .unit-card {
+        flex: 0 0 calc(100% - 20px); /* 1 across on phones */
+      }
     }
   </style>
 </head>
@@ -154,13 +224,202 @@
   <!-- ABOUT SECTION -->
   <h1>Johnson's RV & Auto Sales LLC</h1>
   <div class="section">
-    We provide reliable RVs, autos, and repair services with honest pricing and dependable customer care.
-    Located on U.S. 74 in Marshville, NC, we proudly serve the community with quality vehicles and professional repair work.
+    Quality RVs, autos, and repair services with honest pricing and dependable customer care.
+    Located on U.S. 74 in Marshville, NC, we proudly serve the community with reliable vehicles and professional repair work.
   </div>
 
-  <!-- SLIDER PLACEHOLDER -->
-  <div class="slider-box">
-    Your slideshow will go here — add images when you're ready.
+  <!-- CONTINUOUS 4-ACROSS SLIDER (PLACEHOLDER UNITS) -->
+  <h2>Featured Units</h2>
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <!-- First 10 units -->
+      <!-- Repeat block twice for continuous feel -->
+      <!-- UNIT 1–10 -->
+      <!-- You’ll replace images/unitX.jpg with your real JPEGs later -->
+
+      <!-- BLOCK 1 -->
+      <!-- Unit 1 -->
+      <a class="unit-card" href="unit1.html">
+        <img class="unit-image" src="images/unit1.jpg" alt="Unit 1">
+        <div class="unit-info">
+          <div class="unit-title">Unit 1</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit2.html">
+        <img class="unit-image" src="images/unit2.jpg" alt="Unit 2">
+        <div class="unit-info">
+          <div class="unit-title">Unit 2</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit3.html">
+        <img class="unit-image" src="images/unit3.jpg" alt="Unit 3">
+        <div class="unit-info">
+          <div class="unit-title">Unit 3</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit4.html">
+        <img class="unit-image" src="images/unit4.jpg" alt="Unit 4">
+        <div class="unit-info">
+          <div class="unit-title">Unit 4</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit5.html">
+        <img class="unit-image" src="images/unit5.jpg" alt="Unit 5">
+        <div class="unit-info">
+          <div class="unit-title">Unit 5</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit6.html">
+        <img class="unit-image" src="images/unit6.jpg" alt="Unit 6">
+        <div class="unit-info">
+          <div class="unit-title">Unit 6</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit7.html">
+        <img class="unit-image" src="images/unit7.jpg" alt="Unit 7">
+        <div class="unit-info">
+          <div class="unit-title">Unit 7</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit8.html">
+        <img class="unit-image" src="images/unit8.jpg" alt="Unit 8">
+        <div class="unit-info">
+          <div class="unit-title">Unit 8</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit9.html">
+        <img class="unit-image" src="images/unit9.jpg" alt="Unit 9">
+        <div class="unit-info">
+          <div class="unit-title">Unit 9</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit10.html">
+        <img class="unit-image" src="images/unit10.jpg" alt="Unit 10">
+        <div class="unit-info">
+          <div class="unit-title">Unit 10</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <!-- BLOCK 2 (11–20) -->
+      <a class="unit-card" href="unit11.html">
+        <img class="unit-image" src="images/unit11.jpg" alt="Unit 11">
+        <div class="unit-info">
+          <div class="unit-title">Unit 11</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit12.html">
+        <img class="unit-image" src="images/unit12.jpg" alt="Unit 12">
+        <div class="unit-info">
+          <div class="unit-title">Unit 12</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit13.html">
+        <img class="unit-image" src="images/unit13.jpg" alt="Unit 13">
+        <div class="unit-info">
+          <div class="unit-title">Unit 13</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit14.html">
+        <img class="unit-image" src="images/unit14.jpg" alt="Unit 14">
+        <div class="unit-info">
+          <div class="unit-title">Unit 14</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit15.html">
+        <img class="unit-image" src="images/unit15.jpg" alt="Unit 15">
+        <div class="unit-info">
+          <div class="unit-title">Unit 15</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit16.html">
+        <img class="unit-image" src="images/unit16.jpg" alt="Unit 16">
+        <div class="unit-info">
+          <div class="unit-title">Unit 16</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit17.html">
+        <img class="unit-image" src="images/unit17.jpg" alt="Unit 17">
+        <div class="unit-info">
+          <div class="unit-title">Unit 17</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit18.html">
+        <img class="unit-image" src="images/unit18.jpg" alt="Unit 18">
+        <div class="unit-info">
+          <div class="unit-title">Unit 18</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit19.html">
+        <img class="unit-image" src="images/unit19.jpg" alt="Unit 19">
+        <div class="unit-info">
+          <div class="unit-title">Unit 19</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+
+      <a class="unit-card" href="unit20.html">
+        <img class="unit-image" src="images/unit20.jpg" alt="Unit 20">
+        <div class="unit-info">
+          <div class="unit-title">Unit 20</div>
+          <div class="unit-tagline">Tap to view details in its page.</div>
+          <span class="unit-button">View Unit</span>
+        </div>
+      </a>
+    </div>
   </div>
 
   <!-- CONTACT SECTION -->
@@ -181,15 +440,12 @@
     <a href="https://www.google.com/maps?q=8614+US+74,+Marshville,+NC+28103" target="_blank">
       <i class="fa-solid fa-map-location-dot"></i>
     </a>
-
     <a href="https://www.facebook.com/profile.php?id=61591545535492" target="_blank">
       <i class="fa-brands fa-facebook"></i>
     </a>
-
     <a href="tel:7045602552">
       <i class="fa-solid fa-phone"></i>
     </a>
-
     <a href="#" target="_blank">
       <i class="fa-brands fa-instagram"></i>
     </a>
