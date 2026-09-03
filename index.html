@@ -1,259 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johnson's RV & Auto Sales LLC</title>
+  <meta charset="UTF-8" />
+  <title>Johnson's RVs & Autos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            color: #222;
-        }
+    header {
+      background: #1f3b4d;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-        /* HEADER IMAGE */
-        .hero {
-            width: 100%;
-            max-height: 450px;
-            overflow: hidden;
-        }
-        .hero img {
-            width: 100%;
-            display: block;
-        }
+    nav {
+      background: #143042;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
 
-        /* NAVIGATION */
-        nav {
-            background: #1a1a1a;
-            padding: 14px 0;
-            text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        /* MAIN CONTENT */
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 30px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px #ccc;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        h1, h2 {
-            text-align: center;
-            margin-top: 0;
-        }
+    .hero {
+      padding: 40px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
 
-        /* SLIDER SECTIONS */
-        .slider-section {
-            margin: 40px auto;
-            width: 100%;
-            max-width: 1100px;
-        }
+    .hero h1 {
+      margin-bottom: 10px;
+    }
 
-        .slider-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-        .slider-box {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            background: white;
-            box-shadow: 0 0 10px #ccc;
-        }
+    .section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-        .slider img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
+    .card {
+      background: #fff;
+      border-radius: 6px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-        /* ARROWS */
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.4);
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 22px;
-            border-radius: 50%;
-        }
+    .card h3 {
+      margin-top: 0;
+    }
 
-        .arrow-left { left: 10px; }
-        .arrow-right { right: 10px; }
-
-        /* SOCIAL ICONS */
-        .social-bar {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .social-bar img {
-            width: 42px;
-            margin: 0 15px;
-            transition: 0.2s;
-        }
-        .social-bar img:hover {
-            transform: scale(1.15);
-        }
-
-        /* FOOTER */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            margin-top: 40px;
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1f3b4d;
+      color: #fff;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <h1>Johnson's RVs & Autos</h1>
+    <p>Your local destination for quality RVs and vehicles</p>
+  </header>
 
-    <!-- HEADER IMAGE -->
-    <div class="hero">
-        <img src="images/f350-header.jpg" alt="Johnson's RV & Auto Sales">
+  <nav>
+    <a href="#inventory">Inventory</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Welcome to Johnson's RVs & Autos</h1>
+    <p>
+      We specialize in reliable RVs and autos at fair prices. Browse our inventory,
+      learn about our services, and get in touch to schedule a visit.
+    </p>
+  </section>
+
+  <section id="inventory" class="section">
+    <h2>Featured Inventory</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>2020 Travel Trailer</h3>
+        <p>Lightweight, family-friendly trailer with modern amenities.</p>
+        <p><strong>Price:</strong> $24,900</p>
+      </div>
+      <div class="card">
+        <h3>2018 Class C Motorhome</h3>
+        <p>Comfortable motorhome, perfect for long road trips.</p>
+        <p><strong>Price:</strong> $49,500</p>
+      </div>
+      <div class="card">
+        <h3>2015 Pickup Truck</h3>
+        <p>Durable truck with towing capability for your RV.</p>
+        <p><strong>Price:</strong> $18,750</p>
+      </div>
     </div>
+  </section>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="units.html">Units</a>
-        <a href="autos.html">Autos</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <ul>
+      <li>RV and auto sales</li>
+      <li>Trade-ins welcome</li>
+      <li>Basic maintenance and inspections</li>
+      <li>Financing assistance</li>
+    </ul>
+  </section>
 
-    <!-- MAIN CONTENT -->
-    <div class="container">
-        <h1>Welcome to Johnson's RV & Auto Sales LLC</h1>
-        <p style="text-align:center; font-size:18px;">
-            We buy, sell, and repair RVs, autos, and boats.<br>
-            Proudly serving North Carolina with honest deals and quality service.
-        </p>
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> (555) 123-4567</p>
+    <p><strong>Email:</strong> info@johnsonsrvsautos.com</p>
+    <p><strong>Address:</strong> 123 Main Street, Marshville, NC</p>
+  </section>
 
-        <h2>Featured Inventory</h2>
-
-        <!-- RVs SLIDER -->
-        <div class="slider-section">
-            <div class="slider-title">RVs</div>
-            <div class="slider-box">
-                <div class="slider" id="slider-rvs">
-                    <img src="images/placeholder1.jpg">
-                    <img src="images/placeholder2.jpg">
-                    <img src="images/placeholder3.jpg">
-                </div>
-                <div class="arrow arrow-left" onclick="moveSlide('rvs', -1)">❮</div>
-                <div class="arrow arrow-right" onclick="moveSlide('rvs', 1)">❯</div>
-            </div>
-        </div>
-
-        <!-- AUTOS SLIDER -->
-        <div class="slider-section">
-            <div class="slider-title">Autos</div>
-            <div class="slider-box">
-                <div class="slider" id="slider-autos">
-                    <img src="images/placeholder1.jpg">
-                    <img src="images/placeholder2.jpg">
-                    <img src="images/placeholder3.jpg">
-                </div>
-                <div class="arrow arrow-left" onclick="moveSlide('autos', -1)">❮</div>
-                <div class="arrow arrow-right" onclick="moveSlide('autos', 1)">❯</div>
-            </div>
-        </div>
-
-        <!-- CAMPERS SLIDER -->
-        <div class="slider-section">
-            <div class="slider-title">Campers</div>
-            <div class="slider-box">
-                <div class="slider" id="slider-campers">
-                    <img src="images/placeholder1.jpg">
-                    <img src="images/placeholder2.jpg">
-                    <img src="images/placeholder3.jpg">
-                </div>
-                <div class="arrow arrow-left" onclick="moveSlide('campers', -1)">❮</div>
-                <div class="arrow arrow-right" onclick="moveSlide('campers', 1)">❯</div>
-            </div>
-        </div>
-
-        <!-- BOATS SLIDER -->
-        <div class="slider-section">
-            <div class="slider-title">Boats</div>
-            <div class="slider-box">
-                <div class="slider" id="slider-boats">
-                    <img src="images/placeholder1.jpg">
-                    <img src="images/placeholder2.jpg">
-                    <img src="images/placeholder3.jpg">
-                </div>
-                <div class="arrow arrow-left" onclick="moveSlide('boats', -1)">❮</div>
-                <div class="arrow arrow-right" onclick="moveSlide('boats', 1)">❯</div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- SOCIAL ICONS -->
-    <div class="social-bar">
-        <a href="https://www.facebook.com/profile.php?id=61591545535492" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-        </a>
-        <a href="https://maps.google.com/?q=Johnson's+RV+and+Auto+Sales+LLC" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Google Maps">
-        </a>
-        <a href="tel:7045602552">
-            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone">
-        </a>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        Johnson's RV & Auto Sales LLC • Marshville, NC • 704‑560‑2552
-    </footer>
-
-    <!-- SLIDER SCRIPT -->
-    <script>
-        const positions = { rvs: 0, autos: 0, campers: 0, boats: 0 };
-
-        function moveSlide(type, direction) {
-            const slider = document.getElementById(`slider-${type}`);
-            const total = slider.children.length;
-            positions[type] = (positions[type] + direction + total) % total;
-            slider.style.transform = `translateX(-${positions[type] * 100}%)`;
-        }
-
-        setInterval(() => moveSlide('rvs', 1), 4000);
-        setInterval(() => moveSlide('autos', 1), 4000);
-        setInterval(() => moveSlide('campers', 1), 4000);
-        setInterval(() => moveSlide('boats', 1), 4000);
-    </script>
-
+  <footer>
+    &copy; 2026 Johnson's RVs & Autos. All rights reserved.
+  </footer>
 </body>
 </html>
