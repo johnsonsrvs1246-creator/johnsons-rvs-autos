@@ -4,91 +4,128 @@
   <meta charset="UTF-8" />
   <title>Johnson's RVs & Autos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #222;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
     }
 
+    /* Flashy animated gradient header */
     header {
-      background: #1f3b4d;
-      color: #fff;
-      padding: 20px;
+      background: linear-gradient(135deg, #1f3b4d, #0d6efd, #6610f2);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      padding: 40px 20px;
       text-align: center;
+      color: #fff;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     nav {
-      background: #143042;
+      background: #111;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background: #0d6efd;
+      box-shadow: 0 0 15px #0d6efd;
     }
 
     .hero {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
-      background: #ffffff;
+      background: url('https://images.unsplash.com/photo-1526744023-8f6f3d1a3f5f?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.8);
+      box-shadow: inset 0 0 200px rgba(0,0,0,0.7);
     }
 
     .hero h1 {
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
     .hero p {
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
+      font-size: 1.2rem;
     }
 
     .section {
-      padding: 30px 20px;
-      max-width: 1000px;
+      padding: 40px 20px;
+      max-width: 1200px;
       margin: 0 auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #0d6efd;
+      text-shadow: 0 0 10px #0d6efd;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background: #fff;
-      border-radius: 6px;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: #111;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      transition: 0.3s;
+      border: 1px solid #222;
     }
 
-    .card h3 {
-      margin-top: 0;
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #0d6efd;
+      border-color: #0d6efd;
     }
 
     footer {
       text-align: center;
-      padding: 15px;
-      background: #1f3b4d;
+      padding: 20px;
+      background: #000;
       color: #fff;
-      margin-top: 30px;
+      margin-top: 40px;
       font-size: 0.9rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Johnson's RVs & Autos</h1>
-    <p>Your local destination for quality RVs and vehicles</p>
+    <p>Premium RVs • Quality Autos • Flashy Deals</p>
   </header>
 
   <nav>
@@ -99,10 +136,7 @@
 
   <section class="hero">
     <h1>Welcome to Johnson's RVs & Autos</h1>
-    <p>
-      We specialize in reliable RVs and autos at fair prices. Browse our inventory,
-      learn about our services, and get in touch to schedule a visit.
-    </p>
+    <p>Your journey starts here — explore our premium RVs and autos with style.</p>
   </section>
 
   <section id="inventory" class="section">
@@ -131,7 +165,7 @@
     <ul>
       <li>RV and auto sales</li>
       <li>Trade-ins welcome</li>
-      <li>Basic maintenance and inspections</li>
+      <li>Maintenance and inspections</li>
       <li>Financing assistance</li>
     </ul>
   </section>
@@ -144,7 +178,7 @@
   </section>
 
   <footer>
-    &copy; 2026 Johnson's RVs & Autos. All rights reserved.
+    &copy; 2026 Johnson's RVs & Autos — All Rights Reserved
   </footer>
 </body>
 </html>
